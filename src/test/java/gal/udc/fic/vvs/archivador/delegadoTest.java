@@ -1,4 +1,4 @@
-package gal.udc.fic.vvs.archivadorTest;
+package gal.udc.fic.vvs.archivador;
 
 import static org.junit.Assert.assertEquals;
 
@@ -6,6 +6,11 @@ import org.junit.Test;
 
 import gal.udc.fic.vvs.email.archivador.ArchivadorSimple;
 import gal.udc.fic.vvs.email.archivador.Delegado;
+
+
+//Nivel de la prueba:Unidade
+//Categoría: Funcional dinámica de caja negra , positiva
+//Mecanismo de seleccion de datos: String/int random que se me ha ocurrido.
 
 public class delegadoTest {
 	
