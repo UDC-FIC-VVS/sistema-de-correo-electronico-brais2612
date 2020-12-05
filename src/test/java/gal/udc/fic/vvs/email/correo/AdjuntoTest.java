@@ -1,4 +1,4 @@
-package gal.udc.fic.vvs.correo;
+package gal.udc.fic.vvs.email.correo;
 
 import static org.junit.Assert.assertEquals;
 
@@ -9,8 +9,6 @@ import org.junit.rules.ExpectedException;
 import gal.udc.fic.vvs.email.archivo.Audio;
 import gal.udc.fic.vvs.email.archivo.Imagen;
 import gal.udc.fic.vvs.email.archivo.Texto;
-import gal.udc.fic.vvs.email.correo.Adjunto;
-import gal.udc.fic.vvs.email.correo.Mensaje;
 
 //Nivel de la prueba:Unidade
 //Categoría: Funcional dinámica de caja negra , positiva
