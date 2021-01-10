@@ -16,6 +16,11 @@ import gal.udc.fic.vvs.email.archivador.Delegado;
 import gal.udc.fic.vvs.email.archivo.Texto;
 import gal.udc.fic.vvs.email.correo.Mensaje;
 
+
+//Nivel de la prueba: Unidade
+//Categoría: Funcional dinámica de caja negra 
+//Mecanismo de seleccion de datos: GeneradorString.class 
+
 @RunWith(JUnitQuickcheck.class)
 public class delegadoPBT {
 
