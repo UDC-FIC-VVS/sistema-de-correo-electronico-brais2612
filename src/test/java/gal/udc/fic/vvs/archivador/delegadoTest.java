@@ -9,13 +9,16 @@ import gal.udc.fic.vvs.email.archivador.Delegado;
 
 
 //Nivel de la prueba:Unidade
-//Categoría: Funcional dinámica de caja negra , positiva
+//Categoría: Funcional dinámica de caja negra
 //Mecanismo de seleccion de datos: String/int random que se me ha ocurrido.
 
 public class delegadoTest {
 	
 	private String nombre = "archivador";
 	
+	
+	//Comprobar establecerDelegado
+	//Categoría: Funcional dinámica de caja negra positiva
 	@Test
 	public void establecerDelegadoTest() {
 		ArchivadorSimple archivador = new ArchivadorSimple(nombre,1);
@@ -27,7 +30,8 @@ public class delegadoTest {
 		assertEquals(archivador,delegado.obtenerDelegado());
 		
 	}
-	
+	//Comprobar obtenerNombre
+	//Categoría: Funcional dinámica de caja negra positiva
 	@Test
 	public void obtenerNombreTest() {
 		ArchivadorSimple archivador = new ArchivadorSimple(nombre,1);
