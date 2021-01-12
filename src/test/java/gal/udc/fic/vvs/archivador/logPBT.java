@@ -11,6 +11,8 @@ import com.pholser.junit.quickcheck.Property;
 import com.pholser.junit.quickcheck.generator.InRange;
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 
+import GeneradoresPBT.GeneradorMensaje;
+import GeneradoresPBT.GeneradorString;
 import gal.udc.fic.vvs.email.archivador.ArchivadorSimple;
 import gal.udc.fic.vvs.email.archivador.Log;
 import gal.udc.fic.vvs.email.archivo.Texto;

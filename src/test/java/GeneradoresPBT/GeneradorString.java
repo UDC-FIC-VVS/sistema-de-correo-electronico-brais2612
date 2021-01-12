@@ -1,4 +1,4 @@
-package gal.udc.fic.vvs.archivador;
+package GeneradoresPBT;
 
 import com.pholser.junit.quickcheck.generator.GenerationStatus;
 import com.pholser.junit.quickcheck.generator.Generator;
