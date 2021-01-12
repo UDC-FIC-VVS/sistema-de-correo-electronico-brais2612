@@ -30,7 +30,7 @@ public class audioTest {
 	//Comprobar: obtenerNombre con Audio vacío, no debería generar.
 	//Categoría: Funcional dinámica de caja negra negativa
 
-	//Bug: NO deberia generarlo con audio vacio.
+	//Bug: NO deberia estar vacio
 	@Test
 	public void audioVacioGeneratedNameTest() {
 		 Audio audioPrueba = new Audio("","");
@@ -50,7 +50,7 @@ public class audioTest {
 	
 	//COmprobar: obtenerCOntenido y no deberia obtenerlo porque lo pondremos vacio
 	//Categoría: Funcional dinámica de caja negra negativa
-	
+	//Bug:NO deberia estar vacio
 	@Test
 	public void audioVacioGeneratedContentTest() {
 		 Audio audioPrueba = new Audio("","");
