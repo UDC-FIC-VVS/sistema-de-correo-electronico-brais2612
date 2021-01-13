@@ -4,13 +4,12 @@ import com.pholser.junit.quickcheck.generator.GenerationStatus;
 import com.pholser.junit.quickcheck.generator.Generator;
 import com.pholser.junit.quickcheck.random.SourceOfRandomness;
 
-import gal.udc.fic.vvs.email.archivo.Texto;
-import gal.udc.fic.vvs.email.correo.Mensaje;
+import gal.udc.fic.vvs.email.archivo.Imagen;
 
-public class GeneradorMensaje extends Generator<Mensaje>{
-
-	public GeneradorMensaje() {
-		super(Mensaje.class);
+public class GeneradorImagen extends Generator<Imagen> {
+	
+	public GeneradorImagen() {
+		super(Imagen.class);
 	}
 	
 	private static final String LOWERCASE_CHARS = "abcdefghijklmnopqrstuvwxyz";
@@ -19,19 +18,20 @@ public class GeneradorMensaje extends Generator<Mensaje>{
     private static final String SPECIAL_CHARS = ".-\\;:_@[]^/|}{";
     private static final String ALL_MY_CHARS = LOWERCASE_CHARS
             + UPPERCASE_CHARS + NUMBERS + SPECIAL_CHARS;
-    public static final int CAPACITY = (int) Math.random() + 1;
+    public static final int CAPACITY = (int) (Math.random() * (1000 - 1)) + 1;
 
 	@Override
-	public Mensaje generate(SourceOfRandomness random, GenerationStatus status) {
-		StringBuilder nombreGen = new StringBuilder(CAPACITY);
-		StringBuilder contenidoGen = new StringBuilder(CAPACITY);
+	public Imagen generate(SourceOfRandomness random, GenerationStatus status) {
+		StringBuilder nombre = new StringBuilder(CAPACITY);
+		StringBuilder contenido = new StringBuilder(CAPACITY);
 
         for (int i = 0; i < CAPACITY; i++) {
             int randomIndex = random.nextInt(ALL_MY_CHARS.length());
-            nombreGen.append(ALL_MY_CHARS.charAt(randomIndex));
-            contenidoGen.append(ALL_MY_CHARS.charAt(randomIndex));
+            nombre.append(ALL_MY_CHARS.charAt(randomIndex));
+            contenido.append(ALL_MY_CHARS.charAt(randomIndex));
         }
 		
-		return new Mensaje(new Texto(nombreGen.toString(), contenidoGen.toString()));
+		return new Imagen(nombre.toString(), contenido.toString());
 	}
+
 }

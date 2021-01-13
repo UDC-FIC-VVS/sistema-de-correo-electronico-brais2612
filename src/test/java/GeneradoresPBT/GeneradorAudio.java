@@ -4,13 +4,12 @@ import com.pholser.junit.quickcheck.generator.GenerationStatus;
 import com.pholser.junit.quickcheck.generator.Generator;
 import com.pholser.junit.quickcheck.random.SourceOfRandomness;
 
-import gal.udc.fic.vvs.email.archivo.Texto;
-import gal.udc.fic.vvs.email.correo.Mensaje;
+import gal.udc.fic.vvs.email.archivo.Audio;
 
-public class GeneradorMensaje extends Generator<Mensaje>{
-
-	public GeneradorMensaje() {
-		super(Mensaje.class);
+public class GeneradorAudio extends Generator<Audio> {
+	
+	public GeneradorAudio() {
+		super(Audio.class);
 	}
 	
 	private static final String LOWERCASE_CHARS = "abcdefghijklmnopqrstuvwxyz";
@@ -19,10 +18,10 @@ public class GeneradorMensaje extends Generator<Mensaje>{
     private static final String SPECIAL_CHARS = ".-\\;:_@[]^/|}{";
     private static final String ALL_MY_CHARS = LOWERCASE_CHARS
             + UPPERCASE_CHARS + NUMBERS + SPECIAL_CHARS;
-    public static final int CAPACITY = (int) Math.random() + 1;
+    public static final int CAPACITY = (int) (Math.random() * (1000 - 1)) + 1;
 
 	@Override
-	public Mensaje generate(SourceOfRandomness random, GenerationStatus status) {
+	public Audio generate(SourceOfRandomness random, GenerationStatus status) {
 		StringBuilder nombreGen = new StringBuilder(CAPACITY);
 		StringBuilder contenidoGen = new StringBuilder(CAPACITY);
 
@@ -32,6 +31,7 @@ public class GeneradorMensaje extends Generator<Mensaje>{
             contenidoGen.append(ALL_MY_CHARS.charAt(randomIndex));
         }
 		
-		return new Mensaje(new Texto(nombreGen.toString(), contenidoGen.toString()));
+		return new Audio(nombreGen.toString(), contenidoGen.toString());
 	}
+
 }
