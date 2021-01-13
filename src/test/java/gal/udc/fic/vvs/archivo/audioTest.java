@@ -34,8 +34,8 @@ public class audioTest {
 	@Test
 	public void audioVacioGeneratedNameTest() {
 		 Audio audioPrueba = new Audio("","");
-		
-		assertEquals(nombre,audioPrueba.obtenerNombre());
+		 String  vacio = "";
+		assertEquals(vacio,audioPrueba.obtenerNombre());
 	}
 	
 	//COmprobar: obtenerNombre
@@ -51,11 +51,12 @@ public class audioTest {
 	//COmprobar: obtenerCOntenido y no deberia obtenerlo porque lo pondremos vacio
 	//Categoría: Funcional dinámica de caja negra negativa
 	//Bug:NO deberia estar vacio
+	
 	@Test
 	public void audioVacioGeneratedContentTest() {
 		 Audio audioPrueba = new Audio("","");
-		
-		assertEquals(contenido,audioPrueba.obtenerContenido());
+		 String  vacio = "";
+		assertEquals(vacio,audioPrueba.obtenerContenido());
 	}
 
 }
