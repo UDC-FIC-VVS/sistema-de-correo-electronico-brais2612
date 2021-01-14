@@ -15,6 +15,11 @@ import org.junit.rules.ExpectedException;
 
 import gal.udc.fic.vvs.email.archivo.Texto;
 
+
+//Nivel de la prueba: Unidade
+//Categoría: Funcional dinámica de caja negra
+//Mecanismo de seleccion de datos: String/int random que se me ha ocurrido.
+
 public class CarpetaTest {
 
 	private final String nombre = "prueba";
