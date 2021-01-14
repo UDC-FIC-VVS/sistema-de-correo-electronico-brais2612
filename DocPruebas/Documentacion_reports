@@ -1,0 +1,13 @@
+
+
+CHECKSTYLE -> Prueba estatica estructural de caja blanca
+
+SpotBugs-> Prueba dinamica de caja blanca
+
+PiTest-> Herramienta para ganar confianza en el codigo  que identifica mutantes y los prueba, hace una coverage.
+
+
+JETM->
+
+ARCHUNIT -> Prueba dinámica estructural
+
