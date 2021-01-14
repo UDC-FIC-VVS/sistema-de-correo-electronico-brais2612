@@ -6,8 +6,10 @@ SpotBugs-> Prueba dinamica de caja blanca
 
 PiTest-> Herramienta para ganar confianza en el codigo  que identifica mutantes y los prueba, hace una coverage.
 
+ARCHUNIT -> Prueba dinámica estructural
+
 
 JETM->
 
-ARCHUNIT -> Prueba dinámica estructural
+
 

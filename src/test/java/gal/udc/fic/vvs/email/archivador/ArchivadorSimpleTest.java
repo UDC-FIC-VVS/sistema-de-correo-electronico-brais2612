@@ -73,20 +73,6 @@ public class ArchivadorSimpleTest {
 		assertFalse(archivadorTest.almacenarCorreo(correo));
 		
 	}
-	
-	//Comprobar almacenar correo
-	//Categoría: Funcional dinámica de caja negra negativa
-	//BUG: Si el archivo tiene el mismo tamaño no se guarda.
-	@Test 
-	public void almacenarCorreoConEspacioigualTamaño() {
-		
-		ArchivadorSimple archivadorTest = new ArchivadorSimple(nombre, 1);
-			
-		Mensaje correo = new Mensaje(new Texto("1", "1"));
-				
-		assertFalse(archivadorTest.almacenarCorreo(correo));
-		
-	}
 
 
 }

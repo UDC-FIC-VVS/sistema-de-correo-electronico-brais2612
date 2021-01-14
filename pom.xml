@@ -162,6 +162,10 @@
 		            <param>gal.udc.fic.vvs.email.archivador.*</param>
 		            <param>gal.udc.fic.vvs.email.archivo.*</param>
 		            <param>gal.udc.fic.vvs.email.correo.*</param>
+		            <param>gal.udc.fic.vvs.archivadorArchUnit.*</param>
+		            <param>gal.udc.fic.vvs.archivoArchUnit.*</param>
+		            <param>gal.udc.fic.vvs.correoArchUnit.*</param>
+		            
 		        </targetTests>
 		        <avoidCallsTo>
 				    <avoidCallsTo>java.util.logging</avoidCallsTo>
