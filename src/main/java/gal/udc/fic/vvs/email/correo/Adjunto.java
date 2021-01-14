@@ -1,8 +1,13 @@
 package gal.udc.fic.vvs.email.correo;
 
+import etm.core.configuration.EtmManager;
+import etm.core.monitor.EtmMonitor;
+import etm.core.monitor.EtmPoint;
 import gal.udc.fic.vvs.email.archivo.Archivo;
 
 public class Adjunto extends DecoradorMensaje {
+	private static EtmMonitor monitor = EtmManager.getEtmMonitor();
+	
 
     public Adjunto(MensajeAbstracto mensaje, Archivo archivo) {
         super(mensaje);
@@ -10,10 +15,14 @@ public class Adjunto extends DecoradorMensaje {
     }
 
     public int obtenerTamaño() {
+    	EtmPoint point = monitor.createPoint("Adjunto:obtenerTamaño");
+    	point.collect();
         return super.obtenerTamaño() + _archivo.obtenerTamaño();
     }
 
     public String obtenerVisualizacion() {
+    	EtmPoint point = monitor.createPoint("Adjunto:obtenerVisualizacion");
+    	point.collect();
         return super.obtenerVisualizacion() + "\n\nAdxunto: " + _archivo.obtenerPreVisualizacion();
     }
 
