@@ -1,4 +1,4 @@
-package gal.udc.fic.vvs.archivador;
+package gal.udc.fic.vvs.email.archivador;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -12,8 +12,7 @@ import com.pholser.junit.quickcheck.generator.InRange;
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 
 import GeneradoresPBT.GeneradorString;
-import gal.udc.fic.vvs.email.archivador.ArchivadorSimple;
-import gal.udc.fic.vvs.email.archivador.Delegado;
+import GeneradoresPBT.GeneradorMensaje;
 import gal.udc.fic.vvs.email.archivo.Texto;
 import gal.udc.fic.vvs.email.correo.Mensaje;
 
@@ -23,7 +22,7 @@ import gal.udc.fic.vvs.email.correo.Mensaje;
 //Mecanismo de seleccion de datos: GeneradorString.class 
 
 @RunWith(JUnitQuickcheck.class)
-public class delegadoPBT {
+public class DelegadoPBT {
 
 	// Comprobar obtenerNombre
 	// Categoría: Funcional dinámica de caja negra positiva
@@ -69,7 +68,7 @@ public class delegadoPBT {
 	// El espacio minimo deberia ser 1
 
 	@Property
-	public void almacenarCorreo(@InRange(min = "1") int espacio, @From(GeneradorString.class) Mensaje mensajeTest) {
+	public void almacenarCorreo(@InRange(min = "1") int espacio, @From(GeneradorMensaje.class) Mensaje mensajeTest) {
 
 		ArchivadorSimple archivadorTest = new ArchivadorSimple("archivadorTest", espacio);
 		Delegado delegadoTest = new Delegado(archivadorTest);
@@ -83,8 +82,8 @@ public class delegadoPBT {
 	// El espacio minimo deberia ser 1
 
 	@Property
-	public void DelegadoPBT_AlmacenarCorreo_reducidoEspacioDisponible(@InRange(min = "1") int espacio,
-			@From(GeneradorString.class) Mensaje mensajeTest) {
+	public void almacenarCorreoMenosEspacio(@InRange(min = "1") int espacio,
+			@From(GeneradorMensaje.class) Mensaje mensajeTest) {
 
 		ArchivadorSimple archivadorTest = new ArchivadorSimple("archivadorTest", espacio);
 		Delegado delegadoTest = new Delegado(archivadorTest);
@@ -99,7 +98,7 @@ public class delegadoPBT {
 	// Categoría: Funcional dinámica de caja negra positiva
 
 	@Property
-	public void DelegadoPBT_AlmacenarCorreoEnArchivadorSinEspacio(@From(GeneradorString.class) String contenido) {
+	public void almacenarCorreoArchivadorSinEspacio(@From(GeneradorString.class) String contenido) {
 
 		int max = contenido.length() - 1;
 		int min = 1;
@@ -109,7 +108,7 @@ public class delegadoPBT {
 		ArchivadorSimple archivadorTest = new ArchivadorSimple("archivadorTest", espacio);
 		Delegado delegadoTest = new Delegado(archivadorTest);
 		delegadoTest.establecerDelegado(archivadorTest);
-		Mensaje mensajeTest = new Mensaje(new Texto("TextoPrueba", contenido));
+		Mensaje mensajeTest = new Mensaje(new Texto("Pruebaprueba", contenido));
 
 		assertFalse(delegadoTest.almacenarCorreo(mensajeTest));
 	}

@@ -1,4 +1,4 @@
-package gal.udc.fic.vvs.archivador;
+package gal.udc.fic.vvs.email.archivador;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -24,7 +24,7 @@ import gal.udc.fic.vvs.email.correo.OperacionInvalida;
 //Mecanismo de seleccion de datos: GeneradorString.class  && GeneradorMensaje.class
 
 @RunWith(JUnitQuickcheck.class)
-public class logPBT {
+public class LogPBT {
 
 	// Comprobar obtenerNOmbre con PBT
 	// Categoría: Funcional dinámica de caja negra positiva

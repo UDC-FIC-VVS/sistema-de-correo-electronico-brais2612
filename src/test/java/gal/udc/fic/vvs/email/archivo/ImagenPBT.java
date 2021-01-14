@@ -1,4 +1,4 @@
-package gal.udc.fic.vvs.archivo;
+package gal.udc.fic.vvs.email.archivo;
 
 import static org.junit.Assert.assertEquals;
 
@@ -9,65 +9,66 @@ import com.pholser.junit.quickcheck.Property;
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 
 import GeneradoresPBT.GeneradorString;
-import gal.udc.fic.vvs.email.archivo.Texto;
+import gal.udc.fic.vvs.email.archivo.Imagen;
 
 //Nivel de la prueba:Unidade
 //Categoría: Funcional dinámica de caja negra 
 //Mecanismo de seleccion de datos: GeneradorString.class
 
 @RunWith(JUnitQuickcheck.class)
-public class textoPBT {
+public class ImagenPBT {
 
+	
 	// Comprobar: obtenerNombre con PBT
 	// Categoría: Funcional dinámica de caja negra positiva
-
+	
 	@Property
-	public void textoGeneratedNamePBT(@From(GeneradorString.class) String nombre,
+	public void obtenerNombre(@From(GeneradorString.class) String nombre,
 			@From(GeneradorString.class) String contenido) {
 
-		Texto textoPrueba = new Texto(nombre, contenido);
+		Imagen imagenPrueba = new Imagen(nombre, contenido);
 
-		assertEquals(nombre, textoPrueba.obtenerNombre());
+		assertEquals(nombre, imagenPrueba.obtenerNombre());
 
 	}
 
+		
 	// Comprobar: obtenerContenido con PBT
 	// Categoría: Funcional dinámica de caja negra positiva
-
+	
 	@Property
-	public void textoGeneratedContentPBT(@From(GeneradorString.class) String nombre,
+	public void obtenerContenido(@From(GeneradorString.class) String nombre,
 			@From(GeneradorString.class) String contenido) {
 
-		Texto textoPrueba = new Texto(nombre, contenido);
+		Imagen imagenPrueba = new Imagen(nombre, contenido);
 
-		assertEquals(contenido, textoPrueba.obtenerContenido());
+		assertEquals(contenido, imagenPrueba.obtenerContenido());
 
 	}
 
 	// Comprobar: obtenerTamaño con PBT
 	// Categoría: Funcional dinámica de caja negra positiva
-
+	
 	@Property
-	public void textoObtenerTamaño(@From(GeneradorString.class) String nombre,
+	public void obtenerTamaño(@From(GeneradorString.class) String nombre,
 			@From(GeneradorString.class) String contenido) {
 
-		Texto textoPrueba = new Texto(nombre, contenido);
+		Imagen imagenPrueba = new Imagen(nombre, contenido);
 
-		assertEquals(contenido.length(), textoPrueba.obtenerTamaño());
+		assertEquals(contenido.length(), imagenPrueba.obtenerTamaño());
 
 	}
 
 	// Comprobar: obtenerPreVisualizacion con PBT
 	// Categoría: Funcional dinámica de caja negra positiva
-
+	
 	@Property
-	public void textoObtenerPrevisualizacion(@From(GeneradorString.class) String nombre,
+	public void obtenerPreVisualizacion(@From(GeneradorString.class) String nombre,
 			@From(GeneradorString.class) String contenido) {
 
-		Texto textoPrueba = new Texto(nombre, contenido);
-		final String previsualizacion = nombre + "(" + contenido.length() + " bytes, text/plain)";
+		Imagen imagenPrueba = new Imagen(nombre, contenido);
+		final String previsualizacion = nombre + "(" + contenido.length() + " bytes, image/png)";
 
-		assertEquals(previsualizacion, textoPrueba.obtenerPreVisualizacion());
-
+		assertEquals(previsualizacion, imagenPrueba.obtenerPreVisualizacion());
 	}
 }

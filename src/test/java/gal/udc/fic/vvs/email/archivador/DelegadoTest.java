@@ -1,4 +1,4 @@
-package gal.udc.fic.vvs.archivador;
+package gal.udc.fic.vvs.email.archivador;
 
 import static org.junit.Assert.assertEquals;
 
@@ -12,7 +12,7 @@ import gal.udc.fic.vvs.email.archivador.Delegado;
 //Categoría: Funcional dinámica de caja negra
 //Mecanismo de seleccion de datos: String/int random que se me ha ocurrido.
 
-public class delegadoTest {
+public class DelegadoTest {
 	
 	private String nombre = "archivador";
 	

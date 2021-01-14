@@ -1,4 +1,4 @@
-package gal.udc.fic.vvs.archivo;
+package gal.udc.fic.vvs.email.archivo;
 
 import static org.junit.Assert.assertEquals;
 
@@ -16,7 +16,7 @@ import gal.udc.fic.vvs.email.archivo.Audio;
 //Mecanismo de seleccion de datos: GeneradorString.class
 
 @RunWith(JUnitQuickcheck.class)
-public class audioPBT {
+public class AudioPBT {
 
 	// COmprobar: obtenerNombre con PBT
 	// Categoría: Funcional dinámica de caja negra positiva

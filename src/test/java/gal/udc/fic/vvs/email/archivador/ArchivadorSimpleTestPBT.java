@@ -1,4 +1,4 @@
-package gal.udc.fic.vvs.archivador;
+package gal.udc.fic.vvs.email.archivador;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -25,7 +25,7 @@ import gal.udc.fic.vvs.email.correo.Mensaje;
 
 @RunWith(JUnitQuickcheck.class)
 
-public class archivadorSimpleTestPBT {
+public class ArchivadorSimpleTestPBT {
 	
 	private String nombre = "archivador";
 
